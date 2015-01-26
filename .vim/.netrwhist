@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/kwrl/metalsmith/metalsmith-tutorial/build/kuprat'
+let g:netrw_dirhist_2='/home/kwrl/kodeklubben/backend/wsgi/frontpage/templates/frontpage'
+let g:netrw_dirhist_3='/home/kwrl/kodeklubben/backend/wsgi/usermanagement'
