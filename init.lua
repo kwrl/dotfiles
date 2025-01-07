@@ -73,6 +73,29 @@ require("lazy").setup({
           require("lspconfig").rust_analyzer.setup({})
         end,
       },
+      {
+        'hrsh7th/nvim-cmp',
+        config = function()
+          local cmp = require'cmp'
+
+          cmp.setup({
+            sources = {
+              { name = 'nvim_lsp' },
+              { name = 'buffer' },
+              { name = 'path' },
+            },
+            mapping = {
+              ['<C-Space>'] = cmp.mapping.complete(),
+              ['<CR>'] = cmp.mapping.confirm({ select = true }),
+              ['<Tab>'] = cmp.mapping.select_next_item(),
+              ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+            },
+          })
+        end
+      },
+      'hrsh7th/cmp-nvim-lsp',   -- LSP support
+      'hrsh7th/cmp-buffer',     -- Buffer completions
+      'hrsh7th/cmp-path',
     }
   },
   -- Configure any other settings here. See the documentation for more details.
